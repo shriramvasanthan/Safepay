@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-dark-900 text-white font-sans;
+    background: #050508;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0a12;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a3e;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00ff88;
+  }
+}
+
+@layer components {
+  /* Glassmorphism card */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+  }
+
+  .glass-card-green {
+    background: rgba(0, 255, 136, 0.04);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 255, 136, 0.12);
+    border-radius: 16px;
+  }
+
+  .glass-card-purple {
+    background: rgba(168, 85, 247, 0.04);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(168, 85, 247, 0.12);
+    border-radius: 16px;
+  }
+
+  .glass-card-red {
+    background: rgba(239, 68, 68, 0.04);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(239, 68, 68, 0.15);
+    border-radius: 16px;
+  }
+
+  /* Neon button */
+  .btn-neon {
+    @apply relative overflow-hidden px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300;
+    background: linear-gradient(135deg, #00ff88, #00cc6a);
+    color: #050508;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  }
+  .btn-neon:hover {
+    box-shadow: 0 0 40px rgba(0, 255, 136, 0.6);
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    @apply px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  .btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(0, 255, 136, 0.4);
+  }
+
+  /* Input field */
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl text-white text-sm outline-none transition-all duration-300;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .input-field:focus {
+    border-color: rgba(0, 255, 136, 0.5);
+    background: rgba(0, 255, 136, 0.04);
+    box-shadow: 0 0 0 3px rgba(0, 255, 136, 0.1);
+  }
+  .input-field::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, #00ff88, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-purple {
+    background: linear-gradient(135deg, #a855f7, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Ambient glow background */
+  .glow-bg-green {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 255, 136, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .glow-bg-purple {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* Risk meter colors */
+  .risk-low { color: #00ff88; }
+  .risk-medium { color: #fbbf24; }
+  .risk-high { color: #ef4444; }
+
+  .risk-bg-low { background: linear-gradient(90deg, #00ff88, #00cc6a); }
+  .risk-bg-medium { background: linear-gradient(90deg, #fbbf24, #f59e0b); }
+  .risk-bg-high { background: linear-gradient(90deg, #ef4444, #dc2626); }
+
+  /* Nav link */
+  .nav-link {
+    @apply text-sm font-medium transition-colors duration-200;
+    color: rgba(255,255,255,0.6);
+  }
+  .nav-link:hover {
+    color: #00ff88;
+  }
+
+  /* Tag badge */
+  .tag {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium;
+  }
+  .tag-green {
+    background: rgba(0, 255, 136, 0.1);
+    color: #00ff88;
+    border: 1px solid rgba(0, 255, 136, 0.2);
+  }
+  .tag-purple {
+    background: rgba(168, 85, 247, 0.1);
+    color: #a855f7;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+  }
+  .tag-red {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+  }
+  .tag-yellow {
+    background: rgba(251, 191, 36, 0.1);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.2);
+  }
+}
+
+/* Scan line animation for biometric */
+@keyframes scanLine {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+.scan-line {
+  animation: scanLine 1.5s ease-in-out infinite;
+}
+
+/* Pulse ring */
+@keyframes pulseRing {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+.pulse-ring {
+  animation: pulseRing 1.5s ease-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+.float-anim {
+  animation: float 4s ease-in-out infinite;
+}
