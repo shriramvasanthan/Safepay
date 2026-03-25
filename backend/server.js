@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
-app.use(cors({ origin: ['http://localhost:5173', 'http://localhost:3000'] }));
+app.use(cors()); // Allow all origins for Vercel deployment
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
