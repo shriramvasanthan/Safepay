@@ -14,7 +14,7 @@ export default function Footer() {
                 <Shield size={16} className="text-black" />
               </div>
               <span className="font-bold text-lg">
-                Intent<span className="gradient-text">Pay</span> AI
+                Safe<span className="gradient-text">Pay</span> AI
               </span>
             </div>
             <p className="text-sm mb-4" style={{ color: 'rgba(255,255,255,0.45)' }}>

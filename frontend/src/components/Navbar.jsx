@@ -52,7 +52,7 @@ export default function Navbar() {
               style={{ boxShadow: '0 0 20px rgba(0,255,136,0.6)' }} />
           </div>
           <span className="font-bold text-lg">
-            Intent<span className="gradient-text">Pay</span>
+            Safe<span className="gradient-text">Pay</span>
             <span className="text-xs ml-1 tag tag-green">AI</span>
           </span>
         </Link>
