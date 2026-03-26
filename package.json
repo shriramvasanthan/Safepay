@@ -1,7 +1,7 @@
 {
-  "name": "intentpay-ai",
+  "name": "safepay-ai",
   "version": "1.0.0",
-  "description": "IntentPay AI — Smart UPI Payment Risk Verification Platform",
+  "description": "SafePay AI — Smart UPI Payment Risk Verification Platform",
   "scripts": {
     "install:all": "cd backend && npm install && cd ../frontend && npm install",
     "postinstall": "npm run install:all",

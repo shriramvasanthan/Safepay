@@ -162,11 +162,11 @@ const analyzePayment = (req, res) => {
  */
 const generateAIExplanation = (score, reasons, amount, avg, receiverName) => {
   if (score < 35) {
-    return `IntentPay AI analyzed this transaction and found it consistent with your usual payment behavior. The amount of ₹${amount.toLocaleString('en-IN')} is within your normal range, and all other signals look good. You're safe to proceed.`;
+    return `SafePay AI analyzed this transaction and found it consistent with your usual payment behavior. The amount of ₹${amount.toLocaleString('en-IN')} is within your normal range, and all other signals look good. You're safe to proceed.`;
   } else if (score < 70) {
-    return `IntentPay AI detected ${reasons.length} unusual signal${reasons.length > 1 ? 's' : ''} in this transaction. While this may be legitimate, we recommend pausing to verify all details — especially the UPI ID and amount — before confirming.`;
+    return `SafePay AI detected ${reasons.length} unusual signal${reasons.length > 1 ? 's' : ''} in this transaction. While this may be legitimate, we recommend pausing to verify all details — especially the UPI ID and amount — before confirming.`;
   } else {
-    return `IntentPay AI flagged this as HIGH RISK based on ${reasons.length} anomalies detected. This transaction pattern closely resembles ${score > 85 ? 'known fraud/scam scenarios' : 'potentially erroneous payments'}. Please do not proceed without thorough verification.`;
+    return `SafePay AI flagged this as HIGH RISK based on ${reasons.length} anomalies detected. This transaction pattern closely resembles ${score > 85 ? 'known fraud/scam scenarios' : 'potentially erroneous payments'}. Please do not proceed without thorough verification.`;
   }
 };
 

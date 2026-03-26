@@ -65,7 +65,7 @@ export default function HowItWorks() {
             transition={{ delay: 0.1 }}
             className="text-5xl font-black mb-4"
           >
-            How <span className="gradient-text-purple">IntentPay AI</span> Works
+            How <span className="gradient-text-purple">SafePay AI</span> Works
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -148,7 +148,7 @@ export default function HowItWorks() {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-black mb-2">Smart Interventions</h2>
             <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>
-              IntentPay responds differently based on the risk level — graduated friction, not blanket blocks.
+              SafePay responds differently based on the risk level — graduated friction, not blanket blocks.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

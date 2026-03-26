@@ -62,7 +62,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             className="tag tag-green mb-4 inline-flex"
           >
-            IntentPay AI
+            SafePay AI
           </motion.div>
 
           <motion.h1
@@ -71,7 +71,7 @@ export default function About() {
             transition={{ delay: 0.1 }}
             className="text-5xl font-black mb-4"
           >
-            About <span className="gradient-text">IntentPay AI</span>
+            About <span className="gradient-text">SafePay AI</span>
           </motion.h1>
 
           <motion.p
@@ -81,7 +81,7 @@ export default function About() {
             className="text-lg max-w-2xl mx-auto leading-relaxed"
             style={{ color: 'rgba(255,255,255,0.55)' }}
           >
-            We built IntentPay AI to solve a real problem that affects millions of Indian UPI users daily.
+            We built SafePay AI to solve a real problem that affects millions of Indian UPI users daily.
           </motion.p>
         </div>
 
@@ -102,7 +102,7 @@ export default function About() {
               <div>
                 <h3 className="font-semibold mb-2" style={{ color: '#a855f7' }}>Our Solution</h3>
                 <p className="text-sm leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.6)' }}>
-                  IntentPay AI introduces a pre-transaction risk verification layer that analyzes every payment using behavioral data, contextual signals, and pattern matching — then provides graduated interventions based on risk level.
+                  SafePay AI introduces a pre-transaction risk verification layer that analyzes every payment using behavioral data, contextual signals, and pattern matching — then provides graduated interventions based on risk level.
                 </p>
                 <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.6)' }}>
                   Low risk? Seamless. Medium risk? A smart nudge. High risk? Full biometric block. All in under 50ms.

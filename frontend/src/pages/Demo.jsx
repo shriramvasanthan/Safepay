@@ -119,7 +119,7 @@ export default function Demo() {
             className="text-base"
             style={{ color: 'rgba(255,255,255,0.5)' }}
           >
-            Enter payment details and see IntentPay AI analyze risk in real-time
+            Enter payment details and see SafePay AI analyze risk in real-time
           </motion.p>
         </div>
 
@@ -351,7 +351,7 @@ function getMockResult(data) {
     aiExplanation: riskScore < 35
       ? `This transaction looks consistent with your normal payment behavior. Safe to proceed.`
       : riskScore < 70
-      ? `IntentPay AI detected ${riskReasons.length} unusual signal(s). Please verify all details carefully.`
+      ? `SafePay AI detected ${riskReasons.length} unusual signal(s). Please verify all details carefully.`
       : `HIGH RISK: ${riskReasons.length} anomalies detected. This matches fraud/scam patterns. Do not proceed without verification.`
   }
 }

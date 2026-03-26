@@ -1,7 +1,7 @@
 {
-  "name": "intentpay-backend",
+  "name": "safepay-backend",
   "version": "1.0.0",
-  "description": "IntentPay AI Backend - Smart Payment Risk Engine",
+  "description": "SafePay AI Backend - Smart Payment Risk Engine",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

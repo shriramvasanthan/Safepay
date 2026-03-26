@@ -1,4 +1,4 @@
-// API Routes for IntentPay AI
+// API Routes for SafePay AI
 const express = require('express');
 const router = express.Router();
 const { analyzePayment, saveTransaction, getTransactions } = require('../controllers/riskController');
@@ -13,6 +13,6 @@ router.post('/save-transaction', saveTransaction);
 router.get('/transactions', getTransactions);
 
 // GET /api/health — Health check
-router.get('/health', (req, res) => res.json({ status: 'ok', service: 'IntentPay AI Risk Engine' }));
+router.get('/health', (req, res) => res.json({ status: 'ok', service: 'SafePay AI Risk Engine' }));
 
 module.exports = router;

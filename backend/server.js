@@ -1,4 +1,4 @@
-// IntentPay AI — Backend Server
+// SafePay AI — Backend Server
 // Node.js + Express risk analysis engine
 
 const express = require('express');
@@ -25,7 +25,7 @@ app.use('/api', apiRoutes);
 // Root
 app.get('/', (req, res) => {
   res.json({
-    service: 'IntentPay AI Risk Engine',
+    service: 'SafePay AI Risk Engine',
     version: '1.0.0',
     endpoints: [
       'POST /api/analyze-payment',
@@ -45,7 +45,7 @@ app.use((err, req, res, next) => {
 // ─── Start ────────────────────────────────────────────────────────────────────
 if (process.env.NODE_ENV !== 'production') {
   app.listen(PORT, () => {
-    console.log(`\n🚀 IntentPay AI Backend running on http://localhost:${PORT}`);
+    console.log(`\n🚀 SafePay AI Backend running on http://localhost:${PORT}`);
     console.log(`📊 Risk Engine: Ready`);
     console.log(`💾 Data Store: In-memory (mock)\n`);
   });

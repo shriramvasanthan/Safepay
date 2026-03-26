@@ -1,4 +1,4 @@
-// API utility functions for IntentPay AI
+// API utility functions for SafePay AI
 // All backend calls go through these helpers
 
 const API_BASE = '/api'

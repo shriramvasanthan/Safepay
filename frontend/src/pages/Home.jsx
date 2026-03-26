@@ -63,20 +63,20 @@ const features = [
 ]
 
 const steps = [
-  { n: '01', icon: Users, color: '#a855f7', title: 'Behavior Analysis', desc: 'IntentPay learns your typical payment patterns — average amounts, known contacts, and usual transaction times.' },
+  { n: '01', icon: Users, color: '#a855f7', title: 'Behavior Analysis', desc: 'SafePay learns your typical payment patterns — average amounts, known contacts, and usual transaction times.' },
   { n: '02', icon: Brain, color: '#3b82f6', title: 'Risk Scoring', desc: 'Every payment is evaluated against 6+ risk factors and assigned a score from 0 to 100 in milliseconds.' },
   { n: '03', icon: Shield, color: '#00ff88', title: 'Smart Intervention', desc: 'Based on your score, the app either approves seamlessly, shows a warning, or requires biometric confirmation.' }
 ]
 
 const comparison = [
-  { feature: 'Wrong payment detection', upi: false, intentpay: true },
-  { feature: 'Risk scoring before payment', upi: false, intentpay: true },
-  { feature: 'Behavioral analysis', upi: false, intentpay: true },
-  { feature: 'Smart warning alerts', upi: false, intentpay: true },
-  { feature: 'Biometric override', upi: false, intentpay: true },
-  { feature: 'Transaction reversal', upi: false, intentpay: false },
-  { feature: 'Basic UPI transfer', upi: true, intentpay: true },
-  { feature: 'QR code support', upi: true, intentpay: true },
+  { feature: 'Wrong payment detection', upi: false, safepay: true },
+  { feature: 'Risk scoring before payment', upi: false, safepay: true },
+  { feature: 'Behavioral analysis', upi: false, safepay: true },
+  { feature: 'Smart warning alerts', upi: false, safepay: true },
+  { feature: 'Biometric override', upi: false, safepay: true },
+  { feature: 'Transaction reversal', upi: false, safepay: false },
+  { feature: 'Basic UPI transfer', upi: true, safepay: true },
+  { feature: 'QR code support', upi: true, safepay: true },
 ]
 
 export default function Home() {
@@ -119,7 +119,7 @@ export default function Home() {
                 className="text-lg mb-8 leading-relaxed"
                 style={{ color: 'rgba(255,255,255,0.55)' }}
               >
-                IntentPay AI analyzes every UPI payment for risk before you confirm.
+                SafePay AI analyzes every UPI payment for risk before you confirm.
                 Stop wrong transfers, scam payments, and accidental sends — before they happen.
               </motion.p>
 
@@ -171,7 +171,7 @@ export default function Home() {
                   {/* Status bar */}
                   <div className="px-6 py-3 flex justify-between text-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>
                     <span>9:41</span>
-                    <span>IntentPay AI</span>
+                    <span>SafePay AI</span>
                     <span>●●●</span>
                   </div>
 
@@ -182,7 +182,7 @@ export default function Home() {
                         style={{ background: 'linear-gradient(135deg, #00ff88, #00cc6a)' }}>
                         <Shield size={24} className="text-black" />
                       </div>
-                      <p className="text-xs font-bold" style={{ color: '#00ff88' }}>IntentPay AI</p>
+                      <p className="text-xs font-bold" style={{ color: '#00ff88' }}>SafePay AI</p>
                     </div>
 
                     {/* Payment card */}
@@ -342,7 +342,7 @@ export default function Home() {
           <FadeUp className="text-center mb-12">
             <span className="tag tag-purple mb-4 inline-block">Comparison</span>
             <h2 className="text-4xl font-black">
-              UPI vs <span className="gradient-text">IntentPay AI</span>
+              UPI vs <span className="gradient-text">SafePay AI</span>
             </h2>
           </FadeUp>
 
@@ -352,9 +352,9 @@ export default function Home() {
               <div className="grid grid-cols-3 p-4 border-b" style={{ borderColor: 'rgba(255,255,255,0.06)', background: 'rgba(255,255,255,0.03)' }}>
                 <div className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.6)' }}>Feature</div>
                 <div className="text-sm font-bold text-center" style={{ color: 'rgba(255,255,255,0.5)' }}>Regular UPI</div>
-                <div className="text-sm font-bold text-center gradient-text">IntentPay AI</div>
+                <div className="text-sm font-bold text-center gradient-text">SafePay AI</div>
               </div>
-              {comparison.map(({ feature, upi, intentpay }, i) => (
+              {comparison.map(({ feature, upi, safepay }, i) => (
                 <div key={i} className={`grid grid-cols-3 p-4 ${i < comparison.length - 1 ? 'border-b' : ''}`}
                   style={{ borderColor: 'rgba(255,255,255,0.04)', background: i % 2 === 0 ? 'transparent' : 'rgba(255,255,255,0.01)' }}>
                   <span className="text-sm" style={{ color: 'rgba(255,255,255,0.65)' }}>{feature}</span>
@@ -364,7 +364,7 @@ export default function Home() {
                       : <AlertTriangle size={18} className="inline" style={{ color: '#ef4444' }} />}
                   </div>
                   <div className="text-center">
-                    {intentpay
+                    {safepay
                       ? <CheckCircle size={18} className="inline" style={{ color: '#00ff88' }} />
                       : <span className="text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>UPI Limitation</span>}
                   </div>
@@ -383,7 +383,7 @@ export default function Home() {
               Ready to pay <span className="gradient-text">smarter?</span>
             </h2>
             <p className="mb-8" style={{ color: 'rgba(255,255,255,0.5)' }}>
-              Try the live demo and see how IntentPay AI protects you from wrong payments.
+              Try the live demo and see how SafePay AI protects you from wrong payments.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/demo" className="btn-neon flex items-center gap-2 text-base px-10 py-4">

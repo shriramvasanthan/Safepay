@@ -64,7 +64,7 @@ export default function BiometricModal({ result, formData, onConfirm, onCancel, 
             <div className="mt-3 p-3 rounded-xl"
               style={{ background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.15)' }}>
               <p className="text-xs leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
-                🤖 <strong>IntentPay AI:</strong> {result.aiExplanation}
+                🤖 <strong>SafePay AI:</strong> {result.aiExplanation}
               </p>
             </div>
           </div>

@@ -1,4 +1,4 @@
-# IntentPay AI 🛡️
+# SafePay AI 🛡️
 ### Smart UPI Payment Risk Verification Platform
 
 > *"Verify intent, not just the tap."*
@@ -16,7 +16,7 @@ A full-stack fintech demo application that uses AI-based risk scoring to prevent
 ### 1. Clone & Setup Backend
 
 ```bash
-cd intentpay/backend
+cd safepay/backend
 npm install
 npm run dev
 # Backend runs on http://localhost:3001
@@ -25,7 +25,7 @@ npm run dev
 ### 2. Setup Frontend
 
 ```bash
-cd intentpay/frontend
+cd safepay/frontend
 npm install
 npm run dev
 # Frontend runs on http://localhost:5173
@@ -39,7 +39,7 @@ Visit **http://localhost:5173**
 ## 📁 Project Structure
 
 ```
-intentpay/
+safepay/
 ├── backend/
 │   ├── server.js                  # Express server entry
 │   ├── routes/
