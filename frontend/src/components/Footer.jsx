@@ -21,7 +21,7 @@ export default function Footer() {
               A smart payment simulation platform that detects and prevents accidental UPI transactions using AI-based intent verification.
             </p>
             <p className="text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
-              Built by Team Ideaforge · PSG College of Technology
+              Built for IntentPay AI
             </p>
           </div>
 
@@ -58,7 +58,7 @@ export default function Footer() {
         <div className="mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4"
           style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
           <p className="text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
-            © 2024 IntentPay AI · Team Ideaforge · For demo/educational purposes only
+            © 2024 IntentPay AI · For demo/educational purposes only
           </p>
           <div className="flex items-center gap-4">
             {[Github, Twitter, Linkedin].map((Icon, i) => (

@@ -62,7 +62,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             className="tag tag-green mb-4 inline-flex"
           >
-            Team Ideaforge · PSG College of Technology
+            IntentPay AI
           </motion.div>
 
           <motion.h1
@@ -81,7 +81,6 @@ export default function About() {
             className="text-lg max-w-2xl mx-auto leading-relaxed"
             style={{ color: 'rgba(255,255,255,0.55)' }}
           >
-            A final year project by <strong className="text-white">Team Ideaforge</strong> at PSG College of Technology, Coimbatore.
             We built IntentPay AI to solve a real problem that affects millions of Indian UPI users daily.
           </motion.p>
         </div>
@@ -214,20 +213,7 @@ export default function About() {
           </div>
         </FadeUp>
 
-        {/* ── College Banner ── */}
-        <FadeUp>
-          <div className="glass-card-green p-8 text-center">
-            <div className="text-4xl mb-3">🎓</div>
-            <h3 className="text-xl font-black mb-2">PSG College of Technology</h3>
-            <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>Coimbatore, Tamil Nadu, India</p>
-            <p className="text-xs mt-2" style={{ color: 'rgba(255,255,255,0.35)' }}>
-              Department of Computer Science & Engineering · Final Year Project · 2024
-            </p>
-            <div className="mt-4 inline-flex items-center gap-2 tag tag-green">
-              Team Ideaforge
-            </div>
-          </div>
-        </FadeUp>
+
       </div>
     </div>
   )
