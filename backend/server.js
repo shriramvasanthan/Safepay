@@ -43,10 +43,12 @@ app.use((err, req, res, next) => {
 });
 
 // ─── Start ────────────────────────────────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log(`\n🚀 IntentPay AI Backend running on http://localhost:${PORT}`);
-  console.log(`📊 Risk Engine: Ready`);
-  console.log(`💾 Data Store: In-memory (mock)\n`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`\n🚀 IntentPay AI Backend running on http://localhost:${PORT}`);
+    console.log(`📊 Risk Engine: Ready`);
+    console.log(`💾 Data Store: In-memory (mock)\n`);
+  });
+}
 
 module.exports = app;
