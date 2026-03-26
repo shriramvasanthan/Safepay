@@ -4,10 +4,12 @@
   "description": "IntentPay AI — Smart UPI Payment Risk Verification Platform",
   "scripts": {
     "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "postinstall": "npm run install:all",
     "dev:backend": "cd backend && npm run dev",
     "dev:frontend": "cd frontend && npm run dev",
     "dev": "npm run dev:backend & npm run dev:frontend",
-    "start": "cd backend && npm start"
+    "start": "cd backend && npm start",
+    "build": "cd frontend && npm run build && cd .. && rm -rf public && cp -r frontend/dist public"
   },
   "keywords": ["upi", "fintech", "ai", "payments", "react", "nodejs"],
   "author": "Team Ideaforge - PSG College of Technology",
